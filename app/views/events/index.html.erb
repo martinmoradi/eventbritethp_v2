@@ -9,3 +9,30 @@
     </p>
   </div>
 </div>
+
+<hr>
+<div class="container">
+<% @events.each do |event| %>
+  <div class="row">
+    <div class="col-lg-6"><br>
+      <h2><strong><em> <%= event.title %> <i class="fab fa-angellist"></i></em></strong></h2>
+       <% if event.description.to_s.length > 80 %> 
+        <p class="card-text"> <%= event.description.to_s[0..80] + ' [...]' %> </p>
+      <% else %>
+        <p class="card-text"> <%= event.description.to_s[0..80] %> </p>
+      <% end %>
+      <ul>
+        <strong><%= event.start_date.strftime("%Y-%m-%d") %></strong><br>
+        <a><%= event.attendances.count %> attendees <a><br>
+        <a>Prix : <%= event.price %> €<a><br><br>
+      </ul>
+      <p>Rue <%= event.location %></p>
+      <a class="btn btn-info" href="<%= event_path(event.id) %>">See more</a>
+      
+    </div>
+    <div class="col-lg-6">
+        <img class="card-img" src="https://picsum.photos/id/<%= rand(1..99) %>/300/200" alt="Card image cap">
+    </div>
+  </div><hr>
+<%end%>
+</div>
