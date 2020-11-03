@@ -18,7 +18,7 @@ class Event < ApplicationRecord
   end
 
   def divisable_by_five?
-    errors.add(:duration, "must be a multiple of 5") unless duration % 5 == 0 
+    errors.add(:duration, "must be a multiple of 5") unless (duration % 5).zero?
   end
 
 end

@@ -1,2 +1,26 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<div class="container mt-5">
+<h2>Create an event</h2>
+  <%= form_with(url: 'events_path') do |f| %>
+    <div class = "form-group">
+      <div class="field mt-5">
+        <%= f.label :description %>
+        <%= f.text_area :description, autofocus: true, autocomplete: "description", class: 'form-control' %>
+      </div>
+      <div class="field mt-5">
+        <%= f.label :location %>
+        <%= f.text_field :location, autofocus: true, autocomplete: "location", class: 'form-control' %>
+      </div>
+      <div class="field mt-5">
+        <%= f.label :date %>
+        <%= f.date_field :start_date, class: 'form-control' %>
+      </div>
+      <div class="field mt-5">
+        <%= f.label :duration %>
+        <%= f.number_field :duration, class: 'form-control', placeholder: "In minutes", in: 30..240, step: 30 %>
+      </div>
+      <div class="field mt-5">
+        <%= f.label :price %>
+        <%= f.number_field :duration, class: 'form-control', placeholder: "in €uros", in: 1..1000, step: 1 %>
+      </div>
+      <%= f.submit "Create", class: "btn btn-primary mt-5 btn-lg" %>
+    <% end %>
