@@ -1,24 +1,18 @@
-# README
+# Eventbrite - Devise - THP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Get started
 
-Things you may want to cover:
+- On your terminal:
 
-* Ruby version
+```
+$ bundle install
+$ rails db:drop
+$ rails db:create
+$ rails db:migrate
+$ rails db:seed
+$ rails server
+```
 
-* System dependencies
+### Local server : http://localhost:3000
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### On Heroku : https://eventbritethpmm.herokuapp.com/
