@@ -21,13 +21,14 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
- # Use faker and reset for db:seed
-  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
-  gem 'activerecord-reset-pk-sequence'
+# Use faker and reset for db:seed
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'activerecord-reset-pk-sequence'
 
-#Bulma 
-gem "bulma-rails", "~> 0.9.0"
-gem 'bulma_form_builder'
+#Bootstrap 
+gem 'bootstrap', '~> 5.0.0.alpha1'
+gem "bootstrap_form", "~> 4.0"
+gem 'jquery-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
