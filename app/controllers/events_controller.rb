@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :edit, :destroy]
+  before_action :authenticate_user!, only: %i[new edit destroy]
 
-   def index
+  def index
     @events = Event.all
   end
 

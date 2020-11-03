@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <h2>Edit your account informations</h2>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
     <div class="field mt-5">
@@ -20,6 +20,10 @@
         <br />
         <em><%= @minimum_password_length %> characters minimum</em>
       <% end %>
+    </div>
+    <div class="field mt-5">
+      <%= f.label :description %><br />
+      <%= f.text_area :description, autofocus: true, autocomplete: "last_name", class: 'form-control', placeholder: 'Optional' %>
     </div>
     <div class="field mt-5">
       <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
