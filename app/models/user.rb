@@ -14,8 +14,8 @@ class User < ApplicationRecord
             format: { with: /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i, message: 'Email is invalid' },
             uniqueness: { case_sensitive: false },
             length: { minimum: 4, maximum: 254 }
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  # validates :first_name, presence: true
+  # validates :last_name, presence: true
 
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
