@@ -29,7 +29,6 @@
             <%= link_to "Connect", new_user_session_path, :class => "btn btn-outline-primary space_left_button mr-2" %>
             <%= link_to "Create account", new_user_registration_path, :class => "btn btn-primary space_left_button mr-2" %>
           <% else  %>
-            <%#= link_to "Profile", user_path(current_user), :class => "btn btn-outline-primary space_left_button mr-2" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, :class => "btn btn-outline-primary space_left_button mr-2" %>
             <%= link_to "Settings", edit_user_registration_path, :class => "btn btn-outline-primary space_left_button mr-2" %>
           <% end %>
