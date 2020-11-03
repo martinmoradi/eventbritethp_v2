@@ -24,6 +24,11 @@ gem 'jbuilder', '~> 2.5'
  # Use faker and reset for db:seed
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
   gem 'activerecord-reset-pk-sequence'
+
+#Bulma 
+gem "bulma-rails", "~> 0.9.0"
+gem 'bulma_form_builder'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
